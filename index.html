@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>保羅的最後見證</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Fira+Code:wght@400;500&family=Noto+Serif+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Noto Serif TC"', 'Merriweather', 'serif'],
+              display: ['"Noto Serif TC"', 'Cinzel', 'serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            colors: {
+              dungeon: {
+                950: '#1a120b', // Main Background (Deepest Brown)
+                900: '#2b2118', // Panels / Secondary BG
+                800: '#3e2c22', // Borders
+                700: '#5d4037', // Separators
+                600: '#8d6e63', // Muted Text
+                300: '#d7ccc8', // Main Text
+                200: '#efebe9', // Highlights
+                accent: '#a1887f', // UI Accents
+              },
+              spirit: {
+                gold: '#ffb300',
+              },
+              flesh: {
+                red: '#8c2626',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 1s ease-out forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #1a120b;
+        color: #d7ccc8;
+      }
+      /* Custom scrollbar - Dungeon Theme */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #2b2118; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #5d4037; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #8d6e63; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
